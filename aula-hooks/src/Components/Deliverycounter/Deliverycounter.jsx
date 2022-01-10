@@ -1,10 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../Deliverycounter/Deliverycounter.css'
 
 export default function Deliverycounter() {
 
     const [value, setValue] = useState(1);
-    const [buttonStyle, setButtonStyle] = useState("counter-button-minus-active")
+    const [buttonStyle, setButtonStyle] = useState("counter-button-minus-active");
+
+    useEffect(()=>{
+        document.getElementById("moeda").innerHTML = 2.00 * value;
+    },[value])
 
     function down(){
         if( value <= 1){
@@ -35,6 +39,7 @@ export default function Deliverycounter() {
             >
                 +
             </button>
+            <button id="moeda">12,00</button>
         </div>
     )
 }

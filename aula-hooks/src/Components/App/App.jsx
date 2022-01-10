@@ -7,7 +7,7 @@ import Deliverycounter from '../Deliverycounter/Deliverycounter';
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <h1>Delivery Food</h1>
       <Deliverycounter/>
     </>
   );
